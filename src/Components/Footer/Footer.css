@@ -1,0 +1,168 @@
+.footer {
+  background-color: #E7D9D0;
+  color: #865e5e;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-section ul li:hover {
+  color: #f5a623;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f5a623;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 13px;
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 0 8px;
+  }
+}
+
+
+/* OUR LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+/* Link Style */
+.link {
+  text-decoration: none;
+  color: #9f5e5e;
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect (underline animation) */
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #111110;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #ca5318;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Active Link */
+.link.active {
+  color: #ae542d;
+  font-weight: 500;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+}

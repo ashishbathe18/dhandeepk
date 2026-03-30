@@ -1,0 +1,221 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(135deg, #f0efee, #f5f4f3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* LOGO */
+.logo img {
+  height: 75px;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= NAV LINKS (DESKTOP) ================= */
+.nav-links {
+  display: flex;
+  list-style: none;
+  
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.product-link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+  margin-right: 97px;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.product-link:hover {
+  color: #ffd54f;
+  background: rgba(255,213,79,0.2);
+}
+
+/* ================= DROPDOWN (DESKTOP) ================= */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 260px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  max-height: 500px;
+}
+
+/* CATEGORY */
+.category {
+  margin-bottom: 10px;
+}
+
+.category-title {
+  font-weight: 600;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* SUBCATEGORY */
+.subcategory {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.subcategory.show {
+  max-height: 200px;
+}
+
+.subcategory a {
+  display: block;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ================= OVERLAY ================= */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* RIGHT SIDE DRAWER */
+  .nav-links {
+    position: fixed;
+    right: -100%;   /* 👈 hidden */
+    top: 0;
+    height: 100vh;
+    width: 270px;
+    background: linear-gradient(180deg, #ccb6a4, #6c9878);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 20px;
+    gap: 10px;
+    transition: 0.4s ease;
+    overflow-y: auto;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    right: 0;   /* 👈 OPEN FROM RIGHT */
+  }
+
+  .nav-links a,
+  .product-link {
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  /* MOBILE DROPDOWN */
+  .dropdown {
+    position: static;
+    transform: none;
+    background: rgba(255,255,255,0.08);
+    box-shadow: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    max-height: none;
+    display: none;
+  }
+
+  .dropdown.show {
+    display: block;
+  }
+
+  /* MOBILE CATEGORY */
+  .category-title {
+    color: #ffd54f;
+    font-size: 18px;
+  }
+
+  .subcategory {
+    display: none;
+  }
+
+  .subcategory.show {
+    display: block;
+  }
+
+  .subcategory a {
+    color: #eee;
+    font-size: 16px;
+    padding-left: 15px;
+  }
+}

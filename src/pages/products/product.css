@@ -1,0 +1,163 @@
+.product-page {
+  padding: 80px 20px;
+  background: #f7f7f7;
+  margin-top: 80px;
+}
+
+/* GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.card-img {
+  width: 100%;
+  height: 260px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  bottom: 110px;
+  left: 10px;
+  background: #8b0000;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+/* THUMBS */
+.thumbs {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.thumbs img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.thumbs img.active {
+  border: 2px solid black;
+}
+
+/* BODY */
+.card-body {
+  padding: 5px;
+}
+
+.brand {
+  font-size: 13px;
+  color: #888;
+}
+
+.title {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* SIZES */
+.sizes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.sizes span {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sizes span:hover {
+  background: black;
+  color: white;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  padding: 50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:600px){
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-img {
+    height: 220px;
+  }
+}
+/* COLOR SECTION */
+.colors {
+  margin-top: 12px;
+}
+
+.color-label {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+/* PILLS */
+.color-options {
+  display: flex;
+  gap: 8px;
+}
+
+.color-pill {
+  background: black;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.color-pill:hover {
+  background: #333;
+}

@@ -1,0 +1,149 @@
+.premium-section{
+padding:120px 20px;
+background:linear-gradient(135deg,#fff5f7,#f4f7ff);
+text-align:center;
+}
+
+.premium-title{
+font-size:38px;
+margin-bottom:70px;
+font-weight:700;
+}
+
+/* GRID */
+
+.premium-grid{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:50px;
+}
+
+/* CARD */
+
+.premium-card{
+background:white;
+padding:45px 30px;
+border-radius:20px;
+box-shadow:0 18px 40px rgba(0,0,0,0.12);
+transition:all 0.35s ease;
+height:100%;
+min-height:380px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+text-align:center;
+}
+
+/* HOVER EFFECT */
+
+.premium-card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 25px 55px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+
+.image-wrapper{
+width:100%;
+height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+margin-bottom:25px;
+}
+
+.image-wrapper img{
+max-width:190px;
+transition:transform 0.35s ease;
+}
+
+.premium-card:hover img{
+transform:scale(1.15);
+}
+
+/* FAST FLOAT ANIMATION */
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+.float{
+animation:float 2.5s ease-in-out infinite;
+}
+
+/* TEXT */
+
+.premium-card h3{
+font-size:24px;
+margin-bottom:12px;
+font-weight:600;
+}
+
+.premium-card p{
+font-size:16px;
+color:#555;
+line-height:1.6;
+max-width:280px;
+}
+
+/* TABLET RESPONSIVE */
+
+@media(max-width:1000px){
+
+.premium-grid{
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+}
+
+.premium-card{
+min-height:360px;
+}
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:600px){
+
+.premium-section{
+padding:80px 15px;
+}
+
+.premium-grid{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.premium-title{
+font-size:28px;
+margin-bottom:40px;
+}
+
+.premium-card{
+padding:35px 20px;
+min-height:330px;
+}
+
+.image-wrapper{
+height:180px;
+}
+
+.image-wrapper img{
+max-width:160px;
+}
+
+.premium-card h3{
+font-size:20px;
+}
+
+.premium-card p{
+font-size:14px;
+}
+
+}
