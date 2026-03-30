@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./navbar.css";
 import logo from "../../assets/logo/logo.png";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL;

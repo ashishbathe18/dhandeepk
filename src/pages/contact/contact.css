@@ -6,7 +6,6 @@ body {
 /* HERO (NO DARK OVERLAY) */
 .contact-hero {
   height: 55vh;
-  background: url("C:\Users\Ashish\Desktop\DeepK\DeepK\src\assets\contact\imagesdfgf.png");
   background-size: cover;
   background-position: center;
   display: flex;

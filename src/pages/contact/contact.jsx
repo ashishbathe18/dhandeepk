@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./contact.css";
-
+import imagesdfgf from "../../assets/contact/imagesdfgf.png"
 function Contact() {
   const baseURL = import.meta.env.VITE_API_BASE_URL;
   const domainName = import.meta.env.VITE_DOMAIN_NAME;
@@ -63,12 +63,19 @@ function Contact() {
     <div className="contact-page">
 
       {/* HERO */}
-      <section className="contact-hero">
-        <div className="overlay">
-          <h1>{contactData?.pageTitle || "Contact Us"}</h1>
-          <p>{contactData?.subtitle || "Let's connect with us"}</p>
-        </div>
-      </section>
+<section
+  className="contact-hero"
+  style={{
+    backgroundImage: `url(${imagesdfgf})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }}
+>
+  <div className="overlay">
+    <h1>{contactData?.pageTitle || "Contact Us"}</h1>
+    <p>{contactData?.subtitle || "Let's connect with us"}</p>
+  </div>
+</section>
 
       {/* MAIN */}
       <section className="contact-section">
