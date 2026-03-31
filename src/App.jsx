@@ -11,12 +11,13 @@ import Blog from "./pages/blog/blog";
 import Contact from "./pages/contact/contact";
 import Product from "./pages/products/product";
 import Services from "./pages/services/services";
+import ScrollToTop from "./pages/scrollToTOP";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

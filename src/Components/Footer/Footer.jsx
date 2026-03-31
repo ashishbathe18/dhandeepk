@@ -2,6 +2,11 @@ import React from "react";
 import "./Footer.css";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import insta from "../../assets/footwear/insta.png";
+import facebook from "../../assets/footwear/facebook.png";
+import twitter from "../../assets/footwear/twitter.png";
+import youtube from "../../assets/footwear/youtube.png";
+import linkdin from "../../assets/footwear/linkdin.png";
 
 const Footer = () => {
   return (
@@ -12,13 +17,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Address</h3>
           <ul>
-         MAHARASHTRA District MUMBAI , Pin 400033 Road/Street/Lane G D Ambekar
-Marg, City Mumbai Village/Town Kalachowky Block Plot-CS 189/197, 4, Flat/Door/Block
-No. 205, Floor-2nd
-Name of
-Premises/
-Building
-Aikyadarshan Chs, Kale Wad
+        Kavaran Mansion Dr. Babasaheb .Ambedkar Road, Dadar East, Mumbai 400014, Maharashtra.
           </ul>
         </div>
 
@@ -74,23 +73,29 @@ Aikyadarshan Chs, Kale Wad
   </a>
 </p>
 
-          <div className="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61588330622607" target="_blank" rel="noreferrer">
-              <FaFacebookF />
-            </a>
-            <a href="https://www.instagram.com/dhandeepkinternational?igsh=eHhpcDkzYjN6MzBh" target="_blank" rel="noreferrer">
-              <FaInstagram />
-            </a>
-            <a href="https://twitter.com/youraccount" target="_blank" rel="noreferrer">
-              <FaTwitter />
-            </a>
-            <a href="https://youtube.com/youraccount" target="_blank" rel="noreferrer">
-              <FaYoutube />
-            </a>
-            <a href="https://www.linkedin.com/in/deepa-shinde-a2947a3b1/" target="_blank" rel="noreferrer">
-  <FaLinkedin />
-</a>
-          </div>
+<div className="social-icons">
+
+  <a href="https://www.facebook.com/profile.php?id=61588330622607" target="_blank" rel="noreferrer">
+    <img src={facebook} alt="Facebook" />
+  </a>
+
+  <a href="https://www.instagram.com/dhandeepkinternational" target="_blank" rel="noreferrer">
+    <img src={insta} alt="Instagram" />
+  </a>
+
+  <a href="https://twitter.com/youraccount" target="_blank" rel="noreferrer">
+    <img src={twitter} alt="Twitter" />
+  </a>
+
+  <a href="https://youtube.com/youraccount" target="_blank" rel="noreferrer">
+    <img src={youtube} alt="YouTube" />
+  </a>
+
+  <a href="https://www.linkedin.com/in/deepa-shinde-a2947a3b1/" target="_blank" rel="noreferrer">
+    <img src={linkdin} alt="LinkedIn" />
+  </a>
+
+</div>
         </div>
 
       </div>

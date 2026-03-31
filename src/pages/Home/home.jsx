@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 
 /* HERO IMAGES */
@@ -21,12 +22,24 @@ import crouser from "../../assets/homes/crouser.png";
 import pund from "../../assets/homes/pund.png";
 
 import punb from "../../assets/homes/punb.png";
+// our product
+import f1 from "../../assets/homes/f1.png";
+import f2 from "../../assets/homes/f2.png";
+import f3 from "../../assets/homes/f3.png";
+import f4 from "../../assets/homes/f4.png";
+// bags
+import b1 from "../../assets/homes/b1.png";
+import b2 from "../../assets/homes/b2.png";
+import b3 from "../../assets/homes/b3.png";
+import b4 from "../../assets/homes/b4.png";
+// belt
+import bl1 from "../../assets/homes/bl1.png";
+import bl2 from "../../assets/homes/bl2.png";
+import bl3 from "../../assets/homes/bl3.png";
+import bl4 from "../../assets/homes/bl4.png";
 
-// look ----//
-import look from "../../assets/homes/look.png";
-import looka from "../../assets/homes/looka.png";
-import lookd from "../../assets/homes/lookd.png";
-import lookb from "../../assets/homes/lookb.png";
+
+
 const Home = () => {
 
 const images = [slide,hero2,slide3];
@@ -107,57 +120,8 @@ Our collections blend global fashion trends with timeless design.
 
 </section>
 
-
+<PremiumCollection/>
 {/* PRODUCTS */}
-
-<section className="products">
-
-<h2>Our Products</h2>
-
-<div className="product-grid">
-
-<div className="product-card">
-
-<img src={footear} alt="footwear"/>
-
-<h3>Ladies Footwear</h3>
-
-<p>
-Stylish sandals and comfortable flats designed
-for modern women.
-</p>
-
-</div>
-
-<div className="product-card">
-
-<img src={bagi} alt="handbag"/>
-
-<h3>Handbags</h3>
-
-<p>
-Elegant handbags crafted with premium materials
-and modern design.
-</p>
-
-</div>
-
-<div className="product-card">
-
-<img src={belt} alt="belt"/>
-
-<h3>Belts</h3>
-
-<p>
-Refined belts that add a touch of sophistication
-to any outfit.
-</p>
-
-</div>
-
-</div>
-
-</section>
 
 
 {/* WHY CHOOSE US */}
@@ -256,9 +220,11 @@ Designed for comfort and style, our heels are perfect for
 parties, office wear, and special occasions.
 </p>
 
-<button className="store-btn">
-SHOP HEELS
-</button>
+<Link to="/products/ladies-footwear/heels">
+  <button className="store-btn">
+    EXPLORE HEELS
+  </button>
+</Link>
 
 </div>
 
@@ -306,11 +272,11 @@ Upgrade your fashion with our trendy ladies bags collection.
 From casual handbags to elegant clutches, find the perfect
 bag for every occasion and daily lifestyle.
 </p>
-
-<button className="bags-btn">
-EXPLORE BAGS
-</button>
-
+<Link to="/products/accessories">
+  <button className="bags-btn">
+    EXPLORE BAGS
+  </button>
+</Link>
 </div>
 
 </div>
@@ -337,9 +303,11 @@ our belts add the perfect touch of elegance to
 casual, formal, and party wear looks.
 </p>
 
-<button className="belt-btn">
-SHOP BELTS
-</button>
+<Link to="/products/accessories">
+  <button className="bags-btn">
+    EXPLORE BELTS
+  </button>
+</Link>
 
 </div>
 
@@ -357,7 +325,55 @@ className="belt-img"
 
 </section>
 
-<PremiumCollection/>
+<section className="products">
+  <h2>Our Products</h2>
+
+  <div className="product-grid">
+
+    {/* FOOTWEAR */}
+    <div className="product-card">
+      <h3>Ladies Footwear</h3>
+
+      <div className="mini-grid">
+        <img src={f1} alt="" />
+        <img src={f2} alt="" />
+        <img src={f3} alt="" />
+        <img src={f4} alt="" />
+      </div>
+
+      
+    </div>
+
+    {/* BAGS */}
+    <div className="product-card">
+      <h3>Handbags</h3>
+
+      <div className="mini-grid">
+        <img src={b1} alt="" />
+        <img src={b2} alt="" />
+        <img src={b3} alt="" />
+        <img src={b4} alt="" />
+      </div>
+
+    
+    </div>
+
+    {/* BELTS */}
+    <div className="product-card">
+      <h3>Belts</h3>
+
+      <div className="mini-grid">
+        <img src={bl1} alt="" />
+        <img src={bl2} alt="" />
+        <img src={bl3} alt="" />
+        <img src={bl4} alt="" />
+      </div>
+
+    
+    </div>
+
+  </div>
+</section>
 
 
 
@@ -423,12 +439,12 @@ className="belt-img"
 
 {/* BRAND STATS */}
 
-<section className="brand-stats">
+<section className="brand-stats gap-4">
 
-<div className="stats-container">
+<div className="stats-container ">
 
 <div className="stat-card">
-<h2>15+</h2>
+<h2>75+</h2>
 <p>Years Experience</p>
 </div>
 
@@ -437,13 +453,9 @@ className="belt-img"
 <p>Designs</p>
 </div>
 
-<div className="stat-card">
-<h2>50+</h2>
-<p>Global Buyers</p>
-</div>
 
 <div className="stat-card">
-<h2>10000+</h2>
+<h2>1000000+</h2>
 <p>Happy Customers</p>
 </div>
 
@@ -453,35 +465,6 @@ className="belt-img"
 
 {/* LOOKBOOK */}
 
-<section className="lookbook">
-
-<h2 className="lookbook-title">Fashion Lookbook</h2>
-
-<div className="lookbook-grid">
-
-<div className="look-card">
-<img src={look} alt="look"/>
-
-</div>
-
-<div className="look-card">
-<img src={looka} alt="look"/>
-
-</div>
-
-<div className="look-card">
-<img src={lookb} alt="look"/>
-
-</div>
-
-<div className="look-card">
-<img src={lookd} alt="look"/>
-
-</div>
-
-</div>
-
-</section>
 </>
 );
 };
