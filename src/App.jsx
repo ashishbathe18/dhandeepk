@@ -11,7 +11,8 @@ import Blog from "./pages/blog/blog";
 import Contact from "./pages/contact/contact";
 import Product from "./pages/products/product";
 import Services from "./pages/services/services";
-import ScrollToTop from "./pages/scrollToTOP";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+
 
 const App = () => {
   return (
